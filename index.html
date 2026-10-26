@@ -29,11 +29,54 @@ h1,h2,h3,.eyebrow{font-family:'Tajawal',sans-serif}.brand h1{font-family:'Amiri'
 @media(max-width:510px){.brand h1{font-size:28px}.mark{width:46px;height:46px}.spiritual{font-size:19px}.compass-circle{width:min(300px,76vw);height:min(300px,76vw)}.compass-header h2{font-size:20px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 
+
+/* Noor mobile cinematic theme */
+:root{--ink:#122034;--sand:#d3a66a;--glass:rgba(255,252,247,.88)}
+body{color:var(--ink);background:#f3e9dc;transition:background 1.3s ease}
+body:before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(180deg,rgba(239,205,161,.10) 0%,rgba(249,238,223,.42) 32%,#f4eadd 83%);transition:background 1s}
+body[data-phase="fajr"]{--sky-top:#4d557c;--sky-bottom:#f4b9a0;--sky-light:#f9dcae;--sand:#c5a0bc;--scene-hue:240deg}
+body[data-phase="sunrise"]{--sky-top:#7799ba;--sky-bottom:#f3c189;--sky-light:#ffe8b1;--sand:#c99a58;--scene-hue:29deg}
+body[data-phase="dhuhr"]{--sky-top:#96bbda;--sky-bottom:#f6e6c5;--sky-light:#fff6df;--sand:#bc965e;--scene-hue:90deg}
+body[data-phase="asr"]{--sky-top:#9fa9b4;--sky-bottom:#f1c891;--sky-light:#fbe7c2;--sand:#b5894b;--scene-hue:25deg}
+body[data-phase="maghrib"]{--sky-top:#655f7f;--sky-bottom:#e99c77;--sky-light:#ffc68d;--sand:#e0ae65;--scene-hue:320deg}
+body[data-phase="isha"]{--sky-top:#19283f;--sky-bottom:#5d6581;--sky-light:#a6a2ad;--sand:#c9ad83;--scene-hue:250deg}
+.shell{max-width:1100px}
+.top{position:relative;z-index:2}.brand h1{color:var(--ink)}.pill{background:rgba(255,250,242,.83);border:1px solid rgba(255,255,255,.84);box-shadow:0 9px 19px #58472e12;color:#1c3345}
+.card{background:var(--glass);border:1px solid rgba(255,255,255,.8);box-shadow:0 16px 45px rgba(66,52,43,.13);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.hero{grid-template-columns:1.03fr .97fr}
+.hero>.card:first-child{text-align:center;min-height:275px}
+.hero .clock{text-align:center;color:var(--ink);font-family:Georgia,'Times New Roman',serif;font-weight:600;font-size:clamp(75px,10vw,140px);letter-spacing:-4px;margin:10px 0 2px}
+.hero .eyebrow{font-family:'Amiri',serif;color:#5c5b57;font-size:21px}
+.hero .date{line-height:1.8;color:#2c3540}
+.hero-foot{justify-content:center;margin-top:15px}
+.countdown-box{background:linear-gradient(100deg,rgba(14,29,45,.96),rgba(30,43,54,.75)),var(--scene,linear-gradient(135deg,#d29f7e,#223a53));background-size:cover;background-position:center;color:#fff;box-shadow:0 14px 30px rgba(24,39,55,.2);border:1px solid #dacaa9}
+.countdown-box:after{content:'☪';color:#f4daaa;opacity:.12}.countdown-box .timer{font-family:Georgia,'Times New Roman',serif;text-align:center;font-size:clamp(43px,6vw,70px);color:#fffaf1}.countdown-box h2{color:#f0ca86}.countdown-box .eyebrow{font-family:'Tajawal',sans-serif;color:#fff}
+.spiritual{background:#fdf5e9de;color:#4f524b}
+.section-title{color:var(--ink)}
+.prayer{background:rgba(255,251,245,.90);border:1px solid rgba(255,255,255,.88);box-shadow:0 10px 20px #614a3412;color:var(--ink)}
+.prayer .symbol{background:#f0eae0;border-radius:50%;color:#1b2d44}.prayer.active{background:linear-gradient(145deg,#fffaf4,#f5e3ca);border:2px solid #daa052;box-shadow:0 6px 23px #ba85454a}.prayer.active .symbol{background:#f1ddbb;color:#8c5d18}
+.prayer .ptime{font-family:Georgia,'Times New Roman',serif;font-size:26px}.prayer h3{font-size:18px}
+.compass-card{background:rgba(255,251,245,.91)}.weather{background:rgba(255,252,247,.87)}.weather-main{background:rgba(248,226,195,.55)}
+#sceneHero{position:relative;border-radius:30px;min-height:135px;background:var(--sky-top,#7189a4);overflow:hidden;box-shadow:0 13px 29px #55463522;margin-top:17px}
+#sceneHero svg{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+#sceneLabel{position:absolute;inset:auto 16px 14px auto;color:white;background:#18283b8c;padding:8px 14px;border-radius:99px;backdrop-filter:blur(8px);font-weight:700;z-index:1}
+.weather h2{color:var(--ink)}.weather-main .temp{color:var(--ink)}.countdown-box .foot{color:#f3e4d0}
+@media(max-width:860px){
+.shell{display:flex;flex-direction:column;gap:0;padding:14px 13px 98px}
+.top{order:0}.weather{order:1!important;margin-top:14px}.hero{order:2!important;display:flex;flex-direction:column;gap:14px;margin-top:14px}.spiritual{order:3}.section-title{order:4}.prayers{order:5}.below{display:contents}.compass-card{order:6;margin-top:20px}.footer{order:7}
+.hero>.card:first-child{min-height:0;padding:20px 15px 18px}.hero .clock{font-size:clamp(68px,18vw,108px);margin:6px 0 0}.hero .date{font-size:14px}.hero .eyebrow{font-size:16px}.hero-foot{margin-top:9px}.hero-foot strong{font-size:17px}.hero-foot p{font-size:11px}.mini-icon{width:37px;height:37px}
+#sceneHero{height:210px;margin:5px 0 0}.weather{padding:15px 18px}.weather h2,.weather>.sub{display:none}.weather-grid{margin:0;display:flex;justify-content:center;gap:0}.weather-main{width:100%;min-height:88px;padding:12px 16px;background:rgba(255,255,255,.33)}.weather-main .temp{font-size:43px}.weather-main .sky{font-size:45px}.weather-stat{display:none}
+.countdown-box{min-height:185px;gap:9px;padding:23px}.countdown-box h2{font-size:30px;margin:8px 0}.countdown-box .timer{font-size:clamp(46px,11vw,70px)}.countdown-box .foot{text-align:center}
+.spiritual{font-size:17px;padding:12px;margin-top:17px}.section-title{margin-top:17px}.prayers{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.prayer{padding:15px 5px;min-height:126px;border-radius:20px;gap:6px}.prayer .symbol{width:42px;height:42px;font-size:23px}.prayer h3{font-size:16px}.prayer .ptime{font-size:21px}
+.compass-card{margin-bottom:13px}.brand small{color:#58646b}.pill{padding:10px 12px}
+}
+@media(min-width:861px){.weather{margin-top:0}.below{margin-top:22px}}
+@media(max-width:390px){.pills{max-width:205px}.pill{font-size:10px}.prayer .ptime{font-size:19px}.hero .clock{font-size:67px}.spiritual{font-size:15px}}
 </style>
 </head>
 <body><main class="shell">
 <header class="top"><div class="brand"><div class="mark">۞</div><div><h1>نُور</h1><small>صلاتك، قبلتك، ووقتك</small></div></div><div class="pills"><button class="pill action" id="locBtn">⌖ تحديث الموقع</button><button class="pill action" id="tvBtn">▣ وضع الشاشة</button></div></header>
-<section class="hero"><div class="card"><div class="eyebrow">السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ</div><div class="clock" id="clock">--:--:--</div><div class="date"><span id="gregorian">—</span><span>•</span><span id="hijri">—</span></div><div class="hero-foot"><div class="mini-icon">⌖</div><div><strong id="place">جارٍ تحديد الموقع...</strong><p id="locationInfo">يُرجى السماح بالوصول إلى الموقع الجغرافي</p></div></div></div><div class="countdown-box"><div><div class="eyebrow">الصلاة القادمة</div><h2 id="nextPrayer">جارٍ التحميل...</h2><div class="foot">الوقت المتبقي حتى الأذان</div></div><div><div class="timer" id="countdown">--:--:--</div><div class="foot" id="nextTime">سيتم تحديث المواقيت تلقائيًا</div></div></div></section>
+<div id="sceneHero" role="img" aria-label="منظر مسجد يتغير مع أوقات الصلاة"><span id="sceneLabel">مشهد اليوم</span></div><section class="hero"><div class="card"><div class="eyebrow">السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ</div><div class="clock" id="clock">--:--:--</div><div class="date"><span id="gregorian">—</span><span>•</span><span id="hijri">—</span></div><div class="hero-foot"><div class="mini-icon">⌖</div><div><strong id="place">جارٍ تحديد الموقع...</strong><p id="locationInfo">يُرجى السماح بالوصول إلى الموقع الجغرافي</p></div></div></div><div class="countdown-box"><div><div class="eyebrow">الصلاة القادمة</div><h2 id="nextPrayer">جارٍ التحميل...</h2><div class="foot">الوقت المتبقي حتى الأذان</div></div><div><div class="timer" id="countdown">--:--:--</div><div class="foot" id="nextTime">سيتم تحديث المواقيت تلقائيًا</div></div></div></section>
 <div class="spiritual">﴿ إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا ﴾</div><div class="section-title"><h2>مواقيت الصلاة</h2><small id="method">بحساب أم القرى • قد تختلف عن تقويم المسجد</small></div><section class="prayers" id="prayers"><div class="prayer">جارٍ جلب المواقيت...</div></section>
 <section class="below"><div class="card compass-card"><div class="compass-header"><div><h2>اتجاه القبلة</h2><small>نحو الكعبة المشرفة، مكة المكرمة</small></div><span style="color:var(--gold);font-size:27px">✦</span></div><div class="compass-layout"><div class="compass-circle"><span class="cardinal north">N</span><span class="cardinal south">S</span><span class="cardinal east">E</span><span class="cardinal west">W</span><div class="needle" id="needle"><svg viewBox="0 0 160 160" aria-label="سهم القبلة"><path d="M80 2 L105 82 L80 70 L55 82 Z" fill="#b59660"/><path d="M80 158 L105 82 L80 96 L55 82 Z" fill="#174c43"/><circle cx="80" cy="80" r="16" fill="#fff" stroke="#174c43" stroke-width="5"/></svg></div><div class="kaaba-icon" role="img" aria-label="رسم الكعبة المشرفة"><svg viewBox="0 0 70 72" xmlns="http://www.w3.org/2000/svg"><path d="M9 22 38 11 62 19 32 31Z" fill="#313b36"/><path d="M9 22 32 31V65L9 55Z" fill="#171d1c"/><path d="M32 31 62 19V54L32 65Z" fill="#252b2a"/><path d="M9 31 32 40 62 28V37L32 49 9 40Z" fill="#bf9d54"/><path d="M13 34 29 40M37 43 57 35" stroke="#f5d28a" stroke-width="1.7" stroke-dasharray="3 2"/><path d="M44 45 53 42V60L44 63Z" fill="#ab8945"/><path d="M45 46 52 44V58L45 61Z" fill="#463c22"/></svg></div></div><div class="compass-info"><div class="degrees" id="qiblaDegree">—°</div><p id="compassStatus">اضغط تشغيل البوصلة لتفعيل الحركة المباشرة</p><div id="alignment" class="alignment" aria-live="polite">✧ حرّك الهاتف نحو اتجاه القبلة</div><button class="primary" id="compassBtn">◈ تشغيل البوصلة</button><div class="notice">وجّه أعلى الهاتف للأمام وأمسكه بشكل مستوٍ. أبعده عن المغناطيس والمعادن.</div></div></div></div>
 <div class="card weather"><h2>الطقس اليوم <span style="font-size:17px;color:var(--gold)">☼</span></h2><p class="sub" style="margin-top:7px;font-size:13px">الحالة الجوية في موقعك</p><div class="weather-grid"><div class="weather-main"><div><div class="temp" id="temp">—°</div><p id="weatherText">جارٍ تحميل الطقس...</p></div><div class="sky" id="weatherIcon">☀</div></div><div class="weather-stat"><strong id="humidity">—%</strong><p>♧ الرطوبة</p></div><div class="weather-stat"><strong id="wind">— كم/س</strong><p>↝ سرعة الرياح</p></div></div><div class="status" id="status">يُحدّث التطبيق الساعة والعد التنازلي تلقائيًا أثناء فتح الصفحة.</div></div></section>
@@ -51,7 +94,7 @@ function period(t){let h=Number(cleanTime(t)?.slice(0,2));return h<12?'ص':'م'}
 function calcQibla(){let r=x=>x*Math.PI/180,p1=r(coords.lat),p2=r(kaaba.lat),dl=r(kaaba.lon-coords.lon);qibla=(Math.atan2(Math.sin(dl),Math.cos(p1)*Math.tan(p2)-Math.sin(p1)*Math.cos(dl))*180/Math.PI+360)%360;$('qiblaDegree').textContent=Math.round(qibla)+'°';setNeedle()}
 function setNeedle(){const relative=heading===null?qibla:(qibla-heading+360)%360;$('needle').style.transform=`rotate(${relative}deg)`;if(heading!==null){let delta=((qibla-heading+540)%360)-180;$('compassStatus').textContent=Math.abs(delta)<6?'✓ أنت الآن باتجاه القبلة':`حرّك الهاتف ${delta>0?'يمينًا':'يسارًا'} بمقدار ${Math.round(Math.abs(delta))}°`;const aligned=Math.abs(delta)<6;document.querySelector('.compass-circle').classList.toggle('aligned',aligned);$('alignment').classList.toggle('success',aligned);$('alignment').textContent=aligned?'✓ ما شاء الله، أنت الآن باتجاه القبلة':'✧ اضبط اتجاه الهاتف حتى تتوهج الدائرة بالأخضر';}else{document.querySelector('.compass-circle').classList.remove('aligned');$('alignment').classList.remove('success');}}
 async function fetchDay(date){let url=`https://api.aladhan.com/v1/timings/${dateKey(date)}?latitude=${coords.lat}&longitude=${coords.lon}&method=4`;let res=await fetch(url);if(!res.ok)throw Error('تعذّر الاتصال بخدمة المواقيت');let j=await res.json();if(j.code!==200||!j.data?.timings)throw Error('تعذّر الحصول على المواقيت');return j.data.timings}
-async function loadTimes(){let now=new Date(),todayKey=dateKey(now);lastLoaded=todayKey;try{let tomorrow=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1);let [a,b]=await Promise.all([fetchDay(now),fetchDay(tomorrow)]);if(lastLoaded!==todayKey)return;dayTimes=a;tomorrowTimes=b;renderPrayers();updateCountdown();$('status').textContent='تم تحديث مواقيت الصلاة وفق طريقة أم القرى. قد تختلف المواقيت المحلية ببضع دقائق.';}catch(e){$('status').textContent='تعذّر تحديث مواقيت الصلاة. تأكد من الإنترنت ثم اضغط تحديث الموقع.';$('prayers').textContent='المواقيت غير متاحة حاليًا';}}
+async function loadTimes(){let now=new Date(),todayKey=dateKey(now);lastLoaded=todayKey;try{let tomorrow=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1);let [a,b]=await Promise.all([fetchDay(now),fetchDay(tomorrow)]);if(lastLoaded!==todayKey)return;dayTimes=a;tomorrowTimes=b;renderPrayers();updateCountdown();refreshScene();$('status').textContent='تم تحديث مواقيت الصلاة وفق طريقة أم القرى. قد تختلف المواقيت المحلية ببضع دقائق.';}catch(e){$('status').textContent='تعذّر تحديث مواقيت الصلاة. تأكد من الإنترنت ثم اضغط تحديث الموقع.';$('prayers').textContent='المواقيت غير متاحة حاليًا';}}
 function nextInfo(){if(!dayTimes)return null;const now=new Date(),base=new Date(now.getFullYear(),now.getMonth(),now.getDate());for(let k of ['Fajr','Dhuhr','Asr','Maghrib','Isha']){let time=at(base,dayTimes[k]);if(time&&time>now)return {name:k,time}}if(tomorrowTimes){let d=new Date(base.getFullYear(),base.getMonth(),base.getDate()+1);return {name:'Fajr',time:at(d,tomorrowTimes.Fajr)}}return null}
 function renderPrayers(){if(!dayTimes)return;let next=nextInfo()?.name;$('prayers').innerHTML=keys.map(k=>`<div class="prayer ${next===k?'active':''}"><span class="symbol">${icons[k]}</span><h3>${names[k]}</h3><div class="ptime">${format12(dayTimes[k])} <span style="font-size:12px;color:#819087">${period(dayTimes[k])}</span></div></div>`).join('')}
 let oldNext='';function updateCountdown(){let x=nextInfo();if(!x||!x.time)return;let seconds=Math.max(0,Math.floor((x.time-new Date())/1000));$('nextPrayer').textContent=names[x.name];$('countdown').textContent=[Math.floor(seconds/3600),Math.floor(seconds%3600/60),seconds%60].map(fmtNum).join(':');$('nextTime').textContent=`الأذان الساعة ${format12(x.time.getHours().toString().padStart(2,'0')+':'+fmtNum(x.time.getMinutes()))} ${x.time.getHours()<12?'ص':'م'}`;if(oldNext!==x.name){oldNext=x.name;renderPrayers()}}
@@ -64,4 +107,51 @@ function orient(e){let h=null;if(typeof e.webkitCompassHeading==='number'&&Numbe
 async function startCompass(){try{if(!('DeviceOrientationEvent'in window))throw Error('هذا الجهاز لا يوفر مستشعر اتجاه للمتصفح');if(typeof DeviceOrientationEvent.requestPermission==='function'){let p=await DeviceOrientationEvent.requestPermission(true);if(p!=='granted')throw Error('لم يتم السماح باستخدام مستشعر الاتجاه')}window.removeEventListener('deviceorientation',orient);window.removeEventListener('deviceorientationabsolute',orient);window.addEventListener('deviceorientation',orient);window.addEventListener('deviceorientationabsolute',orient);$('compassStatus').textContent='حرّك الهاتف ببطء لتحديد الاتجاه...';$('compassBtn').textContent='البوصلة مفعّلة';setTimeout(()=>{if(heading===null)$('compassStatus').textContent='لا تتوفر قراءة اتجاه مطلق من المتصفح. يظهر اتجاه القبلة بالدرجات من الشمال فقط.'},2500)}catch(e){$('compassStatus').textContent=e.message+'؛ جرّب Safari من رابط HTTPS.'}}
 $('compassBtn').addEventListener('click',startCompass);$('locBtn').addEventListener('click',locate);$('tvBtn').addEventListener('click',()=>{document.body.classList.toggle('tv-mode');$('tvBtn').textContent=document.body.classList.contains('tv-mode')?'▣ الوضع العادي':'▣ وضع الشاشة'});
 calcQibla();initClock();setInterval(initClock,1000);locate();setInterval(()=>{if(dayTimes)loadWeather()},30*60*1000);
+
+const themes={fajr:'الفجر • سكينة البدايات',sunrise:'الشروق • إشراقة جديدة',dhuhr:'الظهر • نور النهار',asr:'العصر • ضياء ذهبي',maghrib:'المغرب • لحظات الغروب',isha:'العشاء • هدوء الليل'};
+function getCurrentPhase(){
+ const now=new Date();
+ if(!dayTimes)return now.getHours()<5?'isha':now.getHours()<7?'fajr':now.getHours()<12?'sunrise':now.getHours()<15?'dhuhr':now.getHours()<18?'asr':now.getHours()<20?'maghrib':'isha';
+ const base=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+ const points=[['Isha', 'isha'],['Maghrib','maghrib'],['Asr','asr'],['Dhuhr','dhuhr'],['Sunrise','sunrise'],['Fajr','fajr']];
+ for(const [key,phase] of points){const dt=at(base,dayTimes[key]);if(dt&&now>=dt)return phase;}
+ return 'isha';
+}
+function mosqueScene(phase){
+ const dark=phase==='isha'||phase==='fajr';
+ const night=phase==='isha';
+ const top=getComputedStyle(document.body).getPropertyValue('--sky-top').trim()||'#7896bd';
+ const bottom=getComputedStyle(document.body).getPropertyValue('--sky-bottom').trim()||'#f9d0a1';
+ const sunX=phase==='maghrib'?680:phase==='fajr'?235:phase==='isha'?690:510;
+ const sunY=phase==='maghrib'?154:phase==='fajr'?170:phase==='isha'?78:phase==='sunrise'?151:61;
+ const sunColor=night?'#f4f1df':'#fff8dc';
+ const stars=dark?Array.from({length:22},(_,i)=>{const x=(i*193+87)%900,y=(i*53+21)%150;return '<circle cx="'+x+'" cy="'+y+'" r="'+(i%3===0?1.8:1)+'" fill="#fff4de" opacity=".8"/>'}).join(''):'';
+ return `<svg viewBox="0 0 900 245" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+ <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="${top}"/><stop offset="1" stop-color="${bottom}"/></linearGradient><linearGradient id="walls" x2="0" y2="1"><stop stop-color="#fff2d9"/><stop offset="1" stop-color="#bca68f"/></linearGradient></defs>
+ <rect width="900" height="245" fill="url(#sky)"/>${stars}
+ <circle cx="${sunX}" cy="${sunY}" r="${night?22:32}" fill="${sunColor}" opacity=".18"/>
+ <circle cx="${sunX}" cy="${sunY}" r="${night?10:17}" fill="${sunColor}"/>
+ <path d="M0 191Q125 136 236 172T452 177T700 151T900 170V245H0Z" fill="#a98779" opacity=".30"/>
+ <path d="M0 208Q165 165 330 192T620 180T900 190V245H0Z" fill="#93847e" opacity=".34"/>
+ <g fill="#43516b" opacity=".52"><path d="M0 190h900v55H0z"/><path d="M49 190v-55h8v-14h7v14h8v55M765 190v-69h9v-18h7v18h9v69"/></g>
+ <g fill="url(#walls)" stroke="#ffffff" stroke-width="1.4">
+ <path d="M225 221V143h18v-13h19v13h18v78M250 130V95h7V79h5V66h5v13h5v16h7v35"/>
+ <path d="M613 222V132h16v-12h18v12h16v90M638 120V86h7V67h5V53h5v14h7v19h7v34"/>
+ <path d="M278 218v-63h42v-15h31v-16h65v-26h17v-10h12v10h17v26h65v16h31v15h42v63Z"/>
+ <path d="M346 140c0-28 33-48 65-48s65 20 65 48Z"/><path d="M407 92v-16h7V63h6v13h6v16"/>
+ </g>
+ <g fill="#5a6272" opacity=".68"><path d="M299 211v-43h17v43M333 211v-43h17v43M369 211v-43h17v43M404 211v-43h17v43M439 211v-43h17v43M476 211v-43h17v43M513 211v-43h17v43"/></g>
+ <g stroke="#46514e" stroke-width="4" stroke-linecap="round" fill="none" opacity=".8"><path d="M124 233v-86M124 169q-25-37-44-30M124 165q25-36 49-28M124 156q-35-17-54 3M124 154q33-17 57 3M809 230v-94M809 159q-24-27-44-18M809 156q29-25 49-17M809 155q-38-12-54 2M809 155q31-13 54 1"/></g>
+ <path d="M0 225Q300 209 900 224V245H0Z" fill="#e0d0b9" opacity=".72"/>
+ </svg>`;
+}
+let lastScenePhase='';
+function refreshScene(){
+ const phase=getCurrentPhase();
+ if(phase===lastScenePhase)return;lastScenePhase=phase;
+ document.body.dataset.phase=phase;
+ document.getElementById('sceneLabel').textContent=themes[phase];
+ requestAnimationFrame(()=>{document.getElementById('sceneHero').innerHTML=mosqueScene(phase)+'<span id="sceneLabel">'+themes[phase]+'</span>';});
+}
+setInterval(refreshScene,30000);refreshScene();
 </script></body></html>
